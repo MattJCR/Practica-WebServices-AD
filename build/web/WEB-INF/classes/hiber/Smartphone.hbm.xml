@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-mar-2020 11:29:22 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hiber.Smartphone" table="smartphone" catalog="ad_database" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="modelo" type="string">
+            <column name="modelo" length="30" not-null="true" unique="true" />
+        </property>
+        <property name="bateria" type="java.lang.Integer">
+            <column name="bateria" />
+        </property>
+        <property name="ver" type="java.lang.Integer">
+            <column name="ver" />
+        </property>
+        <property name="firmware" type="string">
+            <column name="firmware" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>
